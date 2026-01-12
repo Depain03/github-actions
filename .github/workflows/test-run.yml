@@ -1,0 +1,43 @@
+name: Run Hello World
+
+on: 
+  push:
+    branches: [ main ]
+
+jobs:
+  pytest: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout SCM
+        uses: actions/checkout@v4
+
+      - name: Setup Python Env
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Test Hello World
+        run: python3 -m unittest test.test_hello_world
+        
+  pyrun:
+    needs: pytest
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout SCM
+        uses: actions/checkout@v4
+
+      - name: Setup Python Env
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run Hello World
+        run: python3 hello-world.py --name Depain
+
+    
+  
+
+    
+
+    
+
