@@ -3,17 +3,21 @@ name: Run Hello World
 on: 
   push:
     branches: [ main ]
+    paths:
+      - '.github/workflows/test-run.yaml'
+      - 'test/test_hello_world.py'
+      - 'hello-world.py'
   workflow_dispatch: #maunual trigger
 
 jobs:
-  self-host-test:
-    runs-on: depain-mac
-    steps:
-      - name: test run
-        run: |
-          echo Hello
-          echo Depain
-          
+  # self-host-test:
+  #   runs-on: depain-mac
+  #   steps:
+  #     - name: test run
+  #       run: |
+  #         echo Hello
+  #         echo Depain
+
   pytest: 
     runs-on: ubuntu-latest
     steps:
