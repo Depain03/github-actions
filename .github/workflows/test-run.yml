@@ -6,6 +6,14 @@ on:
   workflow_dispatch: #maunual trigger
 
 jobs:
+  self-host-test:
+    runs-on: depain-mac
+    steps:
+      - name: test run
+        run: |
+          echo Hello
+          echo Depain
+          
   pytest: 
     runs-on: ubuntu-latest
     steps:
