@@ -3,7 +3,7 @@ name: Github CLI
 on: 
   push:
     paths:
-      - '.github/workflows/gh.yaml'
+      - '.github/workflows/gh.yml'
   workflow_dispatch: #maunual trigger
 
 jobs:
