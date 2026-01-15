@@ -3,6 +3,7 @@ name: Run Hello World
 on: 
   push:
     branches: [ main ]
+  workflow_dispatch: #maunual trigger
 
 jobs:
   pytest: 
