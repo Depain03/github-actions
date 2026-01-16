@@ -1,0 +1,25 @@
+name: Run Hello World
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch: #maunual trigger
+
+jobs:
+  pytest: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run echo
+        run: echo Hello from Worklow Template
+
+
+
+    
+  
+
+    
+
+    
+
