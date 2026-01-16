@@ -54,6 +54,14 @@ jobs:
       input_name: Templated Depain
     secrets: 
       hello-secret: ${{ secrets.HELLO_SECRET }}
+  
+  hello-world-template-shared:
+    needs: pyrun
+    uses: "Depain03/github-actions-shared/.github/workflows/hello-world-template-shared.yml@main"
+    with:
+      input_name: Templated Depain
+    secrets: 
+      hello-secret: ${{ secrets.HELLO_SECRET }}
 
 
 
