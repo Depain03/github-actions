@@ -1,0 +1,23 @@
+name: CommonLib Hello World Template
+
+on:
+  workflow_call:
+    inputs:
+      input_name:
+        required: true
+        type: string
+    secrets:
+      hello-secret:
+        required: false
+
+jobs:
+  hello-world-template:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Hello World Template Name
+        run: echo "Hello World ${{ inputs.input_name }}"
+      
+      - name: Hello World Template Secret
+        run: echo "Secret ${{ secrets.hello-secret }}"
+        

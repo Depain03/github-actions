@@ -46,6 +46,16 @@ jobs:
 
       - name: Run Hello World
         run: python3 hello-world.py --name Depain
+  
+  hello-world-template:
+    needs: pyrun
+    uses: "./.github/workflows/hello-world-template.yml"
+    with:
+      input_name: Templated Depain
+    secrets: 
+      hello-secret: ${{ secrets.HELLO_SECRET }}
+
+
 
     
   
