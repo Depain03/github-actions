@@ -1,4 +1,4 @@
-name: Run Hello World
+name: Run Hello World Template
 
 on:
   push:
